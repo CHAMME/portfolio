@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=2.0, user-scalable=no">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <title>
             Serendipity CHAMME
         </title>
@@ -47,14 +48,14 @@
                 
             }
             section:nth-child(2) img {
-                width:50%;
+                width:40%;
                 margin-bottom: 30px;
             }
             section:nth-child(3){
 
             }
             section:nth-child(3) img {
-                width:50%;
+                width:40%;
                 margin-bottom: 30px;
             }
             section:nth-child(4){
@@ -150,11 +151,14 @@
                 margin: 20px 0;
             }
         </style>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="js/animatescroll.js"></script>
+    <img src="img/precover.png"/> <!--이미지 설정하면 미리보기 화면에서 뜨는지??-->
     </head>
     <body>
         <div id="warp">
            <!--첫화면 S1-->
-            <section>
+            <section id="main">
             <img src="img/serendipityChamme.png"/>
             </section>
            <!--serendipity 설명 S2-->
@@ -232,10 +236,9 @@
                 <p class="date">2008.03 - 2011.02</p>
                 <p>강원대학교사범대학부설고등학교 졸업</p>
             </section>
-            <footer>
-              <img src="img/goTop.png"/>
+            <footer onclick="$('#main').animatescroll({scrollSpeed:2000,easing:'easeInOutCubic'});">
+              <img src="img/goTop.png" />
             </footer>
         </div>
-
     </body>
 </html>
