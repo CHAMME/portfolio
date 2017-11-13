@@ -151,7 +151,7 @@
                 margin: 20px 0;
             }
             .skill {
-                padding-top: 20px;
+                padding-top: 10px;
             }
             .skill p{
                 position: relative;
@@ -168,10 +168,10 @@
                 left: 5px;
                 z-index: 1;
             }
-            .g1{ background:#4c8ecc; transition:all 0.5s;}
-            .g2{ background:#f8af4c; transition:all 0.7s;}
-            .g3{ background:#9067a9; transition:all 1.1s;}
-            .g4{ background:#63b44e; transition:all 1.3s;}
+            .g1{ background:#4c8ecc; transition:all 1s;}
+            .g2{ background:#f8af4c; transition:all 1.5s;}
+            .g3{ background:#9067a9; transition:all 1.7s;}
+            .g4{ background:#63b44e; transition:all 2s;}
             
             
         </style>
@@ -186,10 +186,10 @@
 	       $(window).scroll(function() {
 		  var height = $(window).scrollTop();
 		  if (height >= 1800) {
-			$('.g1').css('width', '80%');
-			$('.g2').css('width', '90%');
-			$('.g3').css('width', '50%');
-			$('.g4').css('width', '65%');
+			$('.g1').css('width', '65%');
+			$('.g2').css('width', '75%');
+			$('.g3').css('width', '45%');
+			$('.g4').css('width', '55%');
 		} else if (height < 1750) {
 			$('.guage').css('width', '0%');
 	}
