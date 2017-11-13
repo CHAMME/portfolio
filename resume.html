@@ -150,9 +150,55 @@
                 width: 26px;
                 margin: 20px 0;
             }
+            .skill {
+                padding-top: 20px;
+            }
+            .skill p{
+                position: relative;
+                z-index: 2;
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            .guage {
+                width:0%;
+                height: 20px;
+                background-color: #999;
+                position: relative;
+                bottom: 18px;
+                left: 5px;
+                z-index: 1;
+            }
+            .g1{ background:#4c8ecc; transition:all 0.5s;}
+            .g2{ background:#f8af4c; transition:all 0.7s;}
+            .g3{ background:#9067a9; transition:all 1.1s;}
+            .g4{ background:#63b44e; transition:all 1.3s;}
+            
+            
         </style>
+        
+        
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="js/animatescroll.js"></script>
+        <script src="js/gambit-smoothscroll-min.js"></script>
+        <script>
+        $(document).ready(function(){
+	       $(window).scroll(function() {
+		  var height = $(window).scrollTop();
+		  if (height >= 1800) {
+			$('.g1').css('width', '80%');
+			$('.g2').css('width', '90%');
+			$('.g3').css('width', '50%');
+			$('.g4').css('width', '65%');
+		} else if (height < 1750) {
+			$('.guage').css('width', '0%');
+	}
+	});
+	$('#wrap').smoothWheel();
+});
+        
+        
+        </script>
     <!-- 미리보기 이미지
     <img src="img/precover.png"/>
     -->
@@ -198,10 +244,12 @@
            <!--스킬, 각종 내용 S5-->
             <section>
                 <h2>SKILL</h2>
-                <div>Photoshop</div><div>게이지</div>
-                <div>Illustrator</div><div>게이지</div>
-                <div>AfterEffect</div><div>게이지</div>
-                <div>HTML/CSS</div><div>게이지</div>
+                <div class="skill">
+                <p>Photoshop</p><div class="guage g1"></div>
+                <p>Illustrator</p><div class="guage g2"></div>
+                <p>AfterEffect</p><div class="guage g3"></div>
+                <p>HTML/CSS</p><div class="guage g4"></div>
+                </div>
                 
                 <h2>경력사항</h2>
                 <p class="date">2016.07 - 2017.06</p>
