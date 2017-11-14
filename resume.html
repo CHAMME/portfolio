@@ -15,7 +15,10 @@
             a {
                 outline:0;
                 text-decoration:none;
-                color:#222;
+                color:#f4f4f4;
+            }
+            a:hover {
+                opacity: 0.5;
             }
             img {
                 border:0;
@@ -29,6 +32,7 @@
             }
             #warp {
                 background-color: #f4f4f4;
+                transition:all 1s;
             }
             section{
                 padding: 70px 5%;
@@ -142,14 +146,6 @@
                 font-weight: 200;
                 margin: 0;
             }
-            footer{
-                background-color: #282828;
-                text-align: center;
-            }
-            footer img {
-                width: 26px;
-                margin: 20px 0;
-            }
             .skill {
                 padding-top: 10px;
             }
@@ -173,24 +169,72 @@
             .g3{ background:#9067a9; transition:all 1.7s;}
             .g4{ background:#63b44e; transition:all 2s;}
             
+            footer{
+                background-color: #282828;
+                color: #F4F4F4;
+            }
+            footer div {
+                display: inline-block;
+                height: 55px;
+            }
+            .bottom{
+                padding: 20px 5%;
+                box-sizing: border-box;
+
+            }
+            .bottom img {
+                width: 18px;
+                height: 18px;
+                vertical-align: bottom;
+                margin-right: 2px;
+            }
+            .goTop{
+                width: 60px;
+                text-align: center;
+                float: right;
+                
+            }
+            .goTop img {
+                width: 25px;
+                margin: 20px auto;
+                vertical-align: middle;
+            }
             
+        /* 420px 이상 일 때 */    
+        @media screen and (min-width:421px) {
+            #warp {
+                width: 420px;
+                margin: 50px auto;
+                box-shadow: #c9c9c9 0px 5px 20px;
+                border-radius: 6px;
+                overflow: hidden;
+            }
+            section:nth-child(1){
+                height: 700px;
+            }
+            section:nth-child(1) img {
+                width:70%;
+                margin-top:240px;
+            }
+    
+    
+            }
         </style>
         
         
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="js/animatescroll.js"></script>
-        <script src="js/gambit-smoothscroll-min.js"></script>
+
         <script>
         $(document).ready(function(){
 	       $(window).scroll(function() {
 		  var height = $(window).scrollTop();
-		  if (height >= 1800) {
+		  if (height >= 1650) {
 			$('.g1').css('width', '65%');
 			$('.g2').css('width', '75%');
 			$('.g3').css('width', '45%');
 			$('.g4').css('width', '55%');
-		} else if (height < 1750) {
+		} else if (height < 1600) {
 			$('.guage').css('width', '0%');
 	}
 	});
@@ -258,15 +302,15 @@
   
                 <h2>활동사항</h2>
                 <p class="date">2015.12 - 2016.02</p>
-                <p>IoT Scoreboard, 몇대몇 서비스 디자인 / BYIT(스타트업)</p>
+                <p>IoT Scoreboard, 몇대몇 서비스 디자인<br/>- BYIT(스타트업)</p>
                 <p class="date">2015.05 - 2015.10</p>
-                <p>Naver Modoo 서비스 교육 보조강사 / Naver I&S</p>
+                <p>Naver Modoo 서비스 교육 보조강사<br/>- Naver I&S</p>
                 <p class="date">2016.03 - 2016.03</p>
-                <p>엄지손가락 안에 모든 것, 5cm App 전시 / 디노마드 YCK2016</p>
+                <p>엄지손가락 안에 모든 것, 5cm App 전시<br/>- 디노마드 YCK2016</p>
                 <p class="date">2012.09 - 2012.09</p>
-                <p>국회의원 한정애 前 공식 사이트 리뉴얼 / 국회의원 한정애</p>
+                <p>국회의원 한정애 前 공식 사이트 리뉴얼<br/>- 국회의원 한정애</p>
                 <p class="date">2012.06 - 2012.10</p>
-                <p>패션 관심사 기반 SNS, Button Up 서비스 디자인 / Station8(스타트업)</p>
+                <p>패션 관심사 기반 SNS, Button Up 서비스 디자인<br/>- Station8(스타트업)</p>
                 
                 <h2>수상내역</h2>
                 <p class="date">2015.11</p>
@@ -286,8 +330,12 @@
                 <p class="date">2008.03 - 2011.02</p>
                 <p>강원대학교사범대학부설고등학교 졸업</p>
             </section>
-            <footer onclick="$('#main').animatescroll({scrollSpeed:2000,easing:'easeInOutCubic'});">
+            <footer>
+             <div class="bottom">
+             <a href="" target="_blank"><img src="img/att_icon.png"/>Watching CHAMME's Portfolio</a></div>
+              <div class="goTop" onclick="$('#main').animatescroll({scrollSpeed:2000,easing:'easeInOutCubic'});">
               <img src="img/goTop.png" />
+              </div>
             </footer>
         </div>
     </body>
