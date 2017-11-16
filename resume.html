@@ -180,7 +180,6 @@
             .bottom{
                 padding: 20px 5%;
                 box-sizing: border-box;
-
             }
             .bottom img {
                 width: 18px;
@@ -230,20 +229,18 @@
         <script>
         $(document).ready(function(){
 	       $(window).scroll(function() {
-		  var height = $(window).scrollTop();
-		  if (height >= 1650) {
-			$('.g1').css('width', '65%');
-			$('.g2').css('width', '75%');
-			$('.g3').css('width', '45%');
-			$('.g4').css('width', '55%');
-		} else if (height < 1600) {
-			$('.guage').css('width', '0%');
-	}
-	});
-	$('#wrap').smoothWheel();
-});
-        
-        
+		          var height = $(window).scrollTop();
+		          if (height >= 1650) {
+			         $('.g1').css('width', '65%');
+			         $('.g2').css('width', '75%');
+			         $('.g3').css('width', '45%');
+			         $('.g4').css('width', '55%');
+		          } else if (height < 1600) {
+			         $('.guage').css('width', '0%');
+	              }
+	       });
+	       $('#wrap').smoothWheel();
+        });
         </script>
     <!-- 미리보기 이미지
     <img src="img/precover.png"/>
