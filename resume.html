@@ -15,7 +15,7 @@
             a {
                 outline:0;
                 text-decoration:none;
-                color:#f4f4f4;
+                color:#282828;
             }
             a:hover {
                 opacity: 0.5;
@@ -30,9 +30,13 @@
                 font-size:14px;
                 color:#282828;
             }
+            #alert {
+                display: none;
+            }
             #warp {
                 background-color: #f4f4f4;
                 transition:all 1s;
+                position: relative;
             }
             section{
                 padding: 70px 5%;
@@ -64,6 +68,8 @@
             }
             section:nth-child(4){
                 background-color: #fff;
+                padding: 40px 0;
+                /* .pGray 때문에 섹션4를 양옆 패딩을 0으로 주고 .info와 h1에 패딩 5% 줌 */
             }
             section:nth-child(5){
                 
@@ -94,7 +100,8 @@
                 box-shadow: #c9c9c9 2px 2px 20px;
             }
             
-            h1 {
+            section:nth-child(4) h1 {
+                margin-left:5%;
                 margin-bottom: 30px;
                 font-size: 2.8em;
             }
@@ -121,7 +128,7 @@
             .info {
                 font-size: 1.2em;
                 margin-top: -60px;
-                padding-top: 20px;
+                padding: 20px 5% 0px 5%;
             }
             .info p{
                 display: inline-block;
@@ -177,6 +184,9 @@
                 display: inline-block;
                 height: 55px;
             }
+            footer a{
+                color:#f4f4f4;
+            }
             .bottom{
                 padding: 20px 5%;
                 box-sizing: border-box;
@@ -198,6 +208,11 @@
                 margin: 20px auto;
                 vertical-align: middle;
             }
+
+            
+            
+            
+            
             
         /* 420px 이상 일 때 */    
         @media screen and (min-width:421px) {
@@ -215,11 +230,40 @@
                 width:70%;
                 margin-top:240px;
             }
-    
-    
+        }
+        /* 1201px 이상 일 때 알림창 띄우기*/    
+        @media screen and (min-width:1201px) {
+            body{
+                overflow: hidden;
             }
+            #alert {
+                display:inline;
+                position: fixed;
+                width: 100vw;
+                height: 100vh;
+                margin-top: -50px;
+                background-color: #282828;
+                text-align: center;
+                z-index: 5;
+                opacity: 0.9;
+            }
+            .alert{
+                width: 500px;
+                margin: 30vh auto;
+                padding: 100px 20px 60px 20px;
+                background-color: #fff;
+                color:#282828;
+                font-size: 1.4em;
+                line-height: 2em;
+            }
+            .alert img {
+                width: 40px;
+                margin-top: 40px;
+            }
+            
+            
+        }
         </style>
-        
         
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -247,6 +291,11 @@
     -->
     </head>
     <body>
+       
+        <div id="alert">
+            <div class="alert">채정훈의 이력서는 현재 모바일에 최적화 되어있습니다.<br/>추후 업그레이드 하겠습니다.<br/>
+            <img src="img/close_icon.png" onclick="$('#alert').css('display', 'none');"/></div>
+        </div>
         <div id="warp">
            <!--첫화면 S1-->
             <section id="main">
@@ -267,7 +316,6 @@
            <!--Profile S4-->
             <section>
             <h1>Profile</h1>
-                    
             <div class="pBox">
                 <div class="profileImg"></div>
                 <div class="name">
