@@ -30,6 +30,14 @@
                 font-size:14px;
                 color:#282828;
             }
+            .preCover {
+                width: 0;
+                height: 0;
+            }
+            .preCover img {
+                width: 0;
+                height: 0;
+            }
             #alert {
                 display: none;
             }
@@ -237,7 +245,7 @@
                 display:inline;
                 position: fixed;
                 width: 100vw;
-                height: 100vh;
+                height: 110vh;
                 margin-top: -50px;
                 background-color: #282828;
                 text-align: center;
@@ -283,12 +291,9 @@
 	       $('#wrap').smoothWheel();
         });
         </script>
-    <!-- 미리보기 이미지
-    <img src="img/precover.png"/>
-    -->
     </head>
     <body>
-       
+        <div class="preCover"><img src="img/precover.png"/></div>
         <div id="alert">
             <div class="alert">채정훈의 이력서는 현재 모바일에 최적화 되어있습니다.<br/>추후 업그레이드 하겠습니다.<br/>
             <img src="img/close_icon.png" onclick="$('#alert').css('display', 'none');"/></div>
@@ -376,7 +381,7 @@
             </section>
             <footer>
              <div class="bottom">
-             <a href="" target="_blank"><img src="img/att_icon.png"/>Watching CHAMME's Portfolio</a></div>
+             <a href="https://chamme.github.io/portfolio/file/Chamme_Portfolio_171117.pdf" target="_blank"><img src="img/att_icon.png"/>Watching CHAMME's Portfolio</a></div>
               <div class="goTop" onclick="$('#main').animatescroll({scrollSpeed:2000,easing:'easeInOutCubic'});">
               <img src="img/goTop.png" />
               </div>
